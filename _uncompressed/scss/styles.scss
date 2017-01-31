@@ -1,0 +1,42 @@
+/* @Project: Material Distributors
+ * @Author: John Lusky
+ * @Date: 6/10/16
+ */
+
+/* ~~ Imports ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import "normalize";
+@import "boilerplate";
+@import "mixins";
+@import "typography";
+
+
+/* ~~ Colors ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$white: #ffffff;
+$black: #000000;
+$teal: #4eb3bd;
+$light-blue-gray: #eaf1f3;
+
+
+/* ~~ Global Variables ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$width: 1280px;
+$global-wrap: 1024px;
+
+$breakpoint-desktop-lg: 1100px;
+$breakpoint-desktop-md: 1005px;
+$breakpoint-desktop-sm: 930px;
+
+$breakpoint-tablet-lg: 850px;
+$breakpoint-tablet-md: 800px;
+$breakpoint-tablet-sm: 768px;
+
+$breakpoint-mobile-lg: 425px;
+$breakpoint-mobile-md: 375px;
+$breakpoint-mobile-sm: 320px;
+
+
+/* ~~ Global Styles ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import "global";

@@ -1,0 +1,22 @@
+{
+  "name": "jl-boilerplate",
+  "version": "2.0.0",
+  "description": "",
+  "main": "../js/app.min.js",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-dest": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lusky@1trickpony.com",
+  "license": "ISC"
+}
