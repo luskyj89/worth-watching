@@ -8,6 +8,7 @@ var worthWatching = $(".worth-watching"),
 
 function init() {
 
+    // Put games worth watching at the top of the list
     worthWatching.prependTo('.scoreboard');
 
     // Smooth scrolling anchors

@@ -553,7 +553,8 @@ textarea {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 body {
   -webkit-font-smoothing: antialiased;
-  background: #ffffff;
+  background: #0c0c0c;
+  color: #ffffff;
   overflow-x: hidden;
   width: 100%;
   font-family: "Mada", sans-serif; }
@@ -562,10 +563,24 @@ body {
 
 h1, h2 {
   font-family: "Mada", sans-serif;
-  font-weight: normal; }
+  font-weight: normal;
+  color: #ffffff; }
+
+h1 {
+  font-size: 40px; }
+  h1 span {
+    position: relative;
+    top: -8px;
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: #3124dc;
+    font-size: 16px; }
+  @media all and (max-width: 800px) {
+    h1 {
+      font-size: 29px; } }
 
 a {
-  text-decoration: none; }
+  color: #685dff; }
   a:focus {
     outline: none; }
 
@@ -589,6 +604,9 @@ textarea {
   width: 100%;
   margin: 0 auto;
   padding: 20px 50px; }
+  @media all and (max-width: 800px) {
+    #content {
+      padding: 20px 15px; } }
 
 .scoreboard {
   list-style-type: none;
@@ -596,13 +614,54 @@ textarea {
   padding: 0; }
   .scoreboard li {
     padding: 10px 20px;
-    border-bottom: 1px solid #000000;
+    font-size: 20px;
+    color: #2f2f2f;
     background-color: #eaf1f3;
     transition: border-width .3s ease-out; }
+    .scoreboard li:nth-child(odd) {
+      background-color: #d7e0e2; }
     .scoreboard li.worth-watching {
-      font-size: 20px;
       font-weight: 500;
       color: #ffffff;
-      background-color: #4eb3bd; }
-    .scoreboard li:hover {
-      border-width: 5px; }
+      background-color: #3124dc; }
+      .scoreboard li.worth-watching:nth-child(odd) {
+        background-color: #291eb9; }
+      .scoreboard li.worth-watching .away-score, .scoreboard li.worth-watching .home-score {
+        background-color: #0c0c0c; }
+    @media all and (max-width: 800px) {
+      .scoreboard li {
+        font-size: 16px; } }
+
+.away-score, .home-score {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  margin: 0 2px 0 7px;
+  padding: 0px 5px;
+  background-color: #77797f;
+  color: #ffffff;
+  font-size: 15px; }
+
+.game-status {
+  font-size: 16px; }
+
+.date-select-btn {
+  display: inline-block;
+  background-color: #3124dc;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 0 8px 0 0px;
+  transition: all .3s ease-out; }
+  .date-select-btn.active {
+    background-color: transparent !important;
+    cursor: default; }
+  .date-select-btn:hover {
+    background-color: #685dff; }
+  @media all and (max-width: 800px) {
+    .date-select-btn {
+      padding: 8px 12px;
+      margin: 0 6px 0 0px; } }
+
+.legal {
+  font-size: 13px; }
