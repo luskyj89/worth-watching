@@ -1,14 +1,17 @@
 <?php require'inc/header.php'; ?>
 
 <?php
-$version = '1.0.1';
+// Global Vars
+$version = '1.0.2';
+$totalShots = 0;
+$totalGoals = 0;
+
 
 // Get cURL resource
 $ch = curl_init();
 
-$requestedDate = $_GET['date'];
-
 // Get today's date
+$requestedDate = $_GET['date'];
 if ($requestedDate != '') {
 
 	$today = $requestedDate;
@@ -130,7 +133,7 @@ $data = json_decode($resp, true);
 				echo 'class="worth-watching in-progress overtime">';
 
 			// Did the game end in OT?
-		} elseif ( $numberOfPeriods >= 4 ) {
+			} elseif ( $numberOfPeriods >= 4 ) {
 
 				echo 'class="worth-watching ended overtime">';
 
@@ -203,9 +206,24 @@ $data = json_decode($resp, true);
 
 			echo '</li>'; // End of the list item
 
+			// Add shots and goals to totals
+			$totalShots += $awayShots + $homeShots;
+			$totalGoals += $awayScore + $homeScore;
+
         } // End of the loop
         ?>
         </ul>
+
+		<?php
+
+			if ( $totalShots != 0 ) {
+
+				echo '<h4 class="stat-total">Total Shots: <span>' . $totalShots . '</span> Total Goals: <span>' . $totalGoals . '</span></h4>';
+
+			} else {
+				echo '<h4>More statistics will populate when the games start.</h4>';
+			}
+		?>
 
 		<p class="legal">*I will accept no responsibility if the game does in fact suck. This algorithm is experimental and needs more development. Any games that the Pittsburgh Penguins are winning or have won suck and I apologize if said games were misrepresented by the application. More leagues might be added eventually.</p>
 
@@ -213,8 +231,10 @@ $data = json_decode($resp, true);
 
 		<br><br><br><br><br><br>
 
+		<?php /*
 		<p>API Output:</p>
         <pre><?php print_r($data); ?></pre>
+		*/ ?>
 
     </div>
 </div>

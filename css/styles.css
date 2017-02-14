@@ -562,7 +562,7 @@ body {
     box-sizing: border-box; }
 
 h1, h2 {
-  font-family: "Mada", sans-serif;
+  font-family: "Russo One", sans-serif;
   font-weight: normal;
   color: #ffffff; }
 
@@ -578,6 +578,22 @@ h1 {
   @media all and (max-width: 800px) {
     h1 {
       font-size: 29px; } }
+
+.stat-total {
+  font-family: "Russo One", sans-serif;
+  font-size: 23px; }
+  .stat-total span {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    margin: 0 20px 0 7px;
+    padding: 0px 13px;
+    background-color: #3124dc;
+    color: #ffffff;
+    font-size: 28px; }
+
+h4 {
+  font-size: 20px; }
 
 a {
   color: #685dff; }
